@@ -1,0 +1,6 @@
+@DeviceTrackerAPI_HostAddress = http://localhost:5109
+
+GET {{DeviceTrackerAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
