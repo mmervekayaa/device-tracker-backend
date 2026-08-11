@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAllPolicy", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins("https://mmervekayaa.github.io")
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
@@ -23,7 +23,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseCors("AllowAllPolicy");
+app.UseCors("AllowFrontendPolicy");
 
 app.UseAuthorization();
 
