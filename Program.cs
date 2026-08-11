@@ -8,14 +8,14 @@ if (!string.IsNullOrEmpty(port))
 }
 
 // Add services to the container.
-builder.Services.AddControllers();
-
-// CORS Policy allowing all origins and GitHub Pages
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontendPolicy", policy =>
     {
-        policy.WithOrigins("https://mmervekayaa.github.io")
+        policy.WithOrigins(
+                  "https://mmervekayaa.github.io",
+                  "http://localhost:5173"
+              )
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
