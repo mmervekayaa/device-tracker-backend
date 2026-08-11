@@ -8,6 +8,7 @@ if (!string.IsNullOrEmpty(port))
 }
 
 // Add services to the container.
+builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontendPolicy", policy =>
