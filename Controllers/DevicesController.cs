@@ -22,6 +22,16 @@ public class DevicesController : ControllerBase
     [HttpPost]
     public IActionResult Create([FromBody] Device device)
     {
+        if (string.IsNullOrWhiteSpace(device.Name))
+        {
+        return BadRequest("Name cannot be empty.");
+        }
+
+        if (string.IsNullOrWhiteSpace(device.Location))
+        {
+        return BadRequest("Location cannot be empty.");
+        }
+        
         if (device.Value < 0)
         {
             return BadRequest("Value cannot be negative.");
