@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DeviceTrackerAPI.csproj" />
+  <Project Path="DeviceTrackerAPI.Tests/DeviceTrackerAPI.Tests.csproj" />
+</Solution>
