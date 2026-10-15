@@ -3,3 +3,7 @@ obj/
 *.Development.json
 .git
 .github
+DeviceTracker.Tests/
+*.sln
+*.md
+*.http

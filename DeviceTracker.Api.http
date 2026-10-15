@@ -1,0 +1,37 @@
+@HostAddress = http://localhost:5109
+
+GET {{HostAddress}}/api/devices
+Accept: application/json
+
+###
+
+GET {{HostAddress}}/api/devices/1
+Accept: application/json
+
+###
+
+POST {{HostAddress}}/api/devices
+Content-Type: application/json
+
+{
+  "name": "Pressure Sensor",
+  "category": "Sensor",
+  "status": "Active",
+  "value": 12.5
+}
+
+###
+
+PUT {{HostAddress}}/api/devices/1
+Content-Type: application/json
+
+{
+  "name": "Temperature Sensor",
+  "category": "Sensor",
+  "status": "Inactive",
+  "value": 22.0
+}
+
+###
+
+DELETE {{HostAddress}}/api/devices/1
